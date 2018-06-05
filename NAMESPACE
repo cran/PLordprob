@@ -1,4 +1,4 @@
-useDynLib(PLordprob)
+useDynLib(PLordprob, .registration = TRUE)
 import(stats)
 import(utils)
 import(mnormt)

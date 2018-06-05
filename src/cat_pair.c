@@ -1,8 +1,8 @@
 //  Pairwise log-likelihood for multivariate ordered probit model
 //  C code by Euloge Clovis Kenne Pagui and Antonio Canale
-
 #include <R.h>   
-#include <Rmath.h>  #include <R_ext/RS.h>
+#include <Rmath.h>  
+#include <R_ext/RS.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -61,7 +61,7 @@ void cat_pair_llik_real2( double *res, double *data, double *corr, double *mu, d
 	  upper[0] = 0.0;
 	  infin[0] = 1;
 	}
-	if(data[i+r**n]>1 & data[i+r**n] < *mod){
+	if((data[i+r**n]>1) && (data[i+r**n] < *mod)){
 	  lower[0] = (tresh[(int)data[i+r**n]-2]-mu[i]-xi[r])/sqrt(*sig2);
 	  upper[0] = (tresh[(int)data[i+r**n]-1]-mu[i]-xi[r])/sqrt(*sig2);
 	  infin[0] = 2;
@@ -76,7 +76,7 @@ void cat_pair_llik_real2( double *res, double *data, double *corr, double *mu, d
 	  upper[1] = 0.0;
 	  infin[1] = 1;
 	}
-	if(data[i+s**n]>1 & data[i+s**n] < *mod){
+	if((data[i+s**n]>1) && (data[i+s**n] < *mod)){
 	  lower[1] = (tresh[(int)data[i+s**n]-2]-mu[i]-xi[s])/sqrt(*sig2);
 	  upper[1] = (tresh[(int)data[i+s**n]-1]-mu[i]-xi[s])/sqrt(*sig2);
 	  infin[1] = 2;

@@ -22,8 +22,8 @@ box-constrained optimization algorithm, as implemented in nlminb.
 \tabular{ll}{
 Package: \tab PLordprob\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-09-29\cr
+Version: \tab 1.1\cr
+Date: \tab 2018-04-20\cr
 License: GPL-2
 }
 }
